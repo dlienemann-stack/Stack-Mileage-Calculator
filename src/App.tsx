@@ -9,8 +9,7 @@ interface LockedRate {
   rate: number;
   gasPrice: number;
   lockedOn: string;
-  lockedFor: string;
-}
+  lockedFor: string;}
  
 interface FetchedPrice {
   price: number;
@@ -268,10 +267,10 @@ Return ONLY a JSON object, no markdown, no backticks:
             <div style={{ ...labelStyle, marginBottom: "8px" }}>How it works</div>
             <div style={{ color: "#64748b", fontSize: "12px", lineHeight: 1.8 }}>
               <code style={{ color: "#93c5fd", background: "rgba(59,130,246,0.1)", padding: "1px 6px", borderRadius: "4px" }}>
-                rate = 35¢ × (gas_price ÷ $2.00)
+                rate = 35¢ × (gas_price ÷ $2.50)
               </code>
               <br />
-              Rate scales with Iowa/Midwest fuel costs from the 35¢ baseline set at $2.00/gal.
+              Rate scales with Iowa/Midwest fuel costs from the 35¢ baseline set at $2.50/gal.
               Capped at the IRS rate ({(IRS_RATE * 100).toFixed(0)}¢/mi). Admin locks the rate on the 1st of each month.
             </div>
           </div>
@@ -351,7 +350,7 @@ Return ONLY a JSON object, no markdown, no backticks:
               <div style={{ color: "#94a3b8", marginBottom: "6px" }}>per mile for {getMonthName(new Date())}</div>
             </div>
             <div style={{ color: "#64748b", fontSize: "12px" }}>
-              Based on ${activeGasPrice?.toFixed(2)}/gal → 35¢ × ({activeGasPrice?.toFixed(2)} ÷ 2.00)
+              Based on ${activeGasPrice?.toFixed(2)}/gal → 35¢ × ({activeGasPrice?.toFixed(2)} ÷ 2.50)
             </div>
           </div>
  
