@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { type CSSProperties } from "react";
 
 const BASE_RATE: number = 0.35;
-const BASE_GAS_PRICE: number = 2.00;
+const BASE_GAS_PRICE: number = 2.50;
 const IRS_RATE: number = 0.72;
  
 interface LockedRate {
